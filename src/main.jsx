@@ -14,10 +14,10 @@ const router = createBrowserRouter([{
   element: <App/>,
   children: [
     {index:true, element: <Home/>},
-    {path:'filme', element:<MovieListPage/>},
-    {path:'filme/filme', element:<MovieDetailPage/>},
-    {path:'generos', element:<GenreListPage/>},
-    {path:'generos/filmes', element:<MoviesByGenrePage/>},
+    {path:'/filmes', element:<MovieListPage/>},
+    {path:'/filmes/:id', element:<MovieDetailPage/>},
+    {path:'/generos', element:<GenreListPage/>},
+    {path:'/generos/filmes', element:<MoviesByGenrePage/>},
     // {path:'*', element: <PageNotFound/>}
   ]
   }
