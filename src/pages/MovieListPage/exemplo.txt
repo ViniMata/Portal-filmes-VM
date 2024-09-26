@@ -1,0 +1,39 @@
+import { useState } from "react"
+export default function MovieListPage(){
+
+    const [contador, setContador] = useState(0)
+
+    const [textoBotao, setTextoBotao] = useState("Luci")
+
+    const handleClick = () => {
+        setContador(prev => prev + 1)
+        
+        console.log(contador)
+    }
+
+    const handleClick2 = () => {
+        setContador(prev => prev - 1)
+        
+        console.log(contador)
+    }
+
+    const handleClick3 = () => {
+        setContador(0)
+        
+        console.log(contador)
+    }
+
+    const mudaTexto = () => {
+        setTextoBotao(prev => prev === "Luci" ? "anjo" : "Luci")
+    }
+    return(
+        <>
+        <p>{Math.random()}</p>
+        <p>{contador}</p>
+        <button onClick={handleClick}>Aumentar</button>
+        <button onClick={handleClick2}>Diminuir</button>
+        <button onClick={handleClick3}>Zerar</button><br />
+        <button onClick={mudaTexto}>{textoBotao}</button>
+        </>
+    )
+}
